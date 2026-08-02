@@ -14,6 +14,8 @@ data storage.
 - CommunityToolkit.Mvvm 8.4.2
 - Eremex Avalonia Controls 1.4.34
 
+Powered by [Eremex Avalonia UI Controls](https://eremexcontrols.net/).
+
 ## Current status
 
 The repository contains the initial desktop application shell. Calculation
