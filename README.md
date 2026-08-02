@@ -14,7 +14,7 @@ data storage.
 - CommunityToolkit.Mvvm 8.4.2
 - Eremex Avalonia Controls 1.4.34
 
-Powered by [Eremex Avalonia UI Controls](https://eremexcontrols.net/).
+Powered by https://eremexcontrols.net
 
 ## Current status
 
