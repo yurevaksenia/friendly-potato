@@ -1,3 +1,4 @@
+Powered by https://eremexcontrols.net
 # WeldAvalonia
 
 Open-source cross-platform application for calculating pollutant emissions from
