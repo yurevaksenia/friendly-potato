@@ -1,0 +1,62 @@
+<mx:MxWindow xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mx="https://schemas.eremexcontrols.net/avalonia"
+             xmlns:mxb="https://schemas.eremexcontrols.net/avalonia/bars"
+             xmlns:mxr="https://schemas.eremexcontrols.net/avalonia/ribbon"
+             xmlns:icons="https://schemas.eremexcontrols.net/avalonia/icons"
+             x:Class="BaseMethod.Views.BaseWindow"
+             Width="900"
+             Height="600"
+             MinWidth="640"
+             MinHeight="420"
+             WindowState="Maximized"
+             Title="Базовая форма">
+
+    <mxb:ToolbarManager IsWindowManager="True">
+        <Grid RowDefinitions="Auto,*">
+            <mxr:RibbonControl Grid.Row="0"
+                               ApplicationButtonGlyph="{x:Static icons:Basic.Doc}"
+                               ApplicationButtonKeyTip="F"
+                               IsQuickAccessToolbarCustomizationButtonVisible="False">
+                <mxr:RibbonControl.ApplicationButtonDropDownControl>
+                    <mxb:PopupMenu MinWidth="250" ContentRightIndent="30">
+                        <mxb:ToolbarButtonItem Name="NewProjectButton"
+                                               Header="Создать"
+                                               Glyph="{x:Static icons:Basic.Doc}"
+                                               GlyphSize="24,24"
+                                               HotKey="Ctrl+N" />
+                        <mxb:ToolbarButtonItem Name="OpenProjectButton"
+                                               Header="Открыть"
+                                               Glyph="{x:Static icons:Basic.Folder_Open}"
+                                               GlyphSize="24,24"
+                                               HotKey="Ctrl+O" />
+                        <mxb:ToolbarButtonItem Name="SaveProjectButton"
+                                               Header="Сохранить"
+                                               Glyph="{x:Static icons:Basic.Save}"
+                                               GlyphSize="24,24"
+                                               HotKey="Ctrl+S" />
+                        <mxb:ToolbarButtonItem Name="SaveProjectAsButton"
+                                               Header="Сохранить как"
+                                               Glyph="{x:Static icons:Basic.Save}"
+                                               GlyphSize="24,24"
+                                               HotKey="Ctrl+Shift+S" />
+                    </mxb:PopupMenu>
+                </mxr:RibbonControl.ApplicationButtonDropDownControl>
+
+                <mxr:RibbonPage Header="Список расчётов" KeyTip="L">
+                    <mxr:RibbonPageGroup Header="Таблица" IsHeaderButtonVisible="False">
+                        <mxb:ToolbarButtonItem Name="AddCalculationButton"
+                                               Header="Добавить"
+                                               Glyph="avares://BaseMethod/Assets/add-calculation.png"
+                                               mxr:RibbonControl.DisplayMode="Large" />
+                    </mxr:RibbonPageGroup>
+                </mxr:RibbonPage>
+                <mxr:RibbonPage Header="Справочники" KeyTip="G" />
+                <mxr:RibbonPage Header="Параметры и справка" KeyTip="P" />
+                <mxr:RibbonPage Header="Расчётное окно" KeyTip="C" />
+            </mxr:RibbonControl>
+
+            <Grid Grid.Row="1" />
+        </Grid>
+    </mxb:ToolbarManager>
+</mx:MxWindow>
